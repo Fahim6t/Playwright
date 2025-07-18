@@ -1,0 +1,69 @@
+What is PlayWright?
+-Playwright is an open source automation library created and maintained by microsoft for performing end to end testing. it allows us to automate browers like (Chromium,Firefox and webkit).
+
+
+*it perform action like
+-Navigation of web pages.
+-Clicking button events
+-Filling forms
+-taking screenshot
+-perform complex testing for user
+
+-it support single and multipage application automation.
+
+
+*Key Features of PlayWright
+-it supports multi web pages
+-it supports Headless and Headed modes.
+-Auto waiting
+-Parallel Execution.
+-Network mocking
+-Visual testing
+-CI/CD Ready
+
+-Login/logout automation
+-Form validation
+-UI Flow validation
+-Responsive test
+-API Mocking during fronted testing
+
+*Software pre-requisit
+->nodejs
+    node -v
+->npm 
+    npm -v 
+->typescript
+    tsc -v 
+    // commad to install typecript
+    npm install -g typecript 
+*Editor
+    ->VS code
+
+<--------------- commands ------------------->
+
+*How to create PlayWright project
+npm init playwright@latest
+
+*How to start playwright project
+npx playwright test
+
+*How to get the test report
+npx playwright show-report
+
+
+Note: By default all playwright script run in headless mode.
+
+*how to execute automation with headed mode
+npx playwright test --headed 
+
+*how to execute automation script in headed mode with single browsers
+npx playwright test --headed --project=chromium
+
+
+
+
+
+
+
+
+
