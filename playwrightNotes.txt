@@ -57,7 +57,26 @@ Note: By default all playwright script run in headless mode.
 npx playwright test --headed 
 
 *how to execute automation script in headed mode with single browsers
-npx playwright test --headed --project=chromium
+npx playwright test --headed --project=chromium 
+
+-----------------------------------------------------------------------------------
+Locator:
+it is to find an element on page at the any moment.
+
+1. Id selector(#): Select an element base on Id.
+const elementName = page.locator("id=#idName");
+
+2. Class Selector(.): Select element based on class name
+const elementName = page.locator(".className);
+
+3.text selector: Select an element bases on what text it contain.
+const elementName = page.locator("'[text='textFormation']");
+
+4.CSS Selector: Select an element bases on their css propety
+const elementName = page.locator("css=button#id");
+
+5.Xpath Selector: Select 
+
 
 
 
