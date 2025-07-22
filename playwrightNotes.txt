@@ -75,9 +75,53 @@ const elementName = page.locator("'[text='textFormation']");
 4.CSS Selector: Select an element bases on their css propety
 const elementName = page.locator("css=button#id");
 
-5.Xpath Selector: Select 
+5.Xpath Selector: Select on element bases on their Xpath query(in this we use element attribute and its value)
+const elementName= page.locator("xpath=//button[text()='submit']");
 
 
+*browser context:
+  -browsercontext is an instance of browser or you can say seperate with incognito mode. where 
+  it store user session and cookies sepwratly, it is use for authentication
+  -if there is multiple user then an only then we use.we do not use it for single user.
+
+
+  ------------------------------------------------------------------------------------
+Assertion:
+-In PlayWright assertion is use to verify that the application behaves as expected or not during testing. they ensure that UI, Element, data are in correct state before or after performing action.
+-playwright provide us built-in asertion throught expect() method, expect method 
+provided by 'playwright/test packages'
+
+example:
+-toBeVisible() : it will pass test if element is toBeVisible.
+-toHaveText() : it will pass test if element has text or data in it.
+-toBeEnabled() : it will pass test if element is enable.
+
+await page.pause(); // it will pause execution an open playwright inspector
+
+command to test file on single browser
+npx playwright test assertion.spec.ts --project chromium --headed
+
+-soft Assertion : it will execute next test cases even through test case failed.
+
+*Custom Assertion
+-we need to write Custom assertion for complex condition and special bussiness logic 
+-we can make reusable logic
+-we can use it for dynamic data comdition.
+
+-------------------------------------------------------------------------------------
+*How to configure text according to your choice
+
+*Hook
+-Hooks allows us to run code before or after yout test.
+-All Hookk are part of test API provided by playwright
+-when we can use Hooks
+
+-beforeAll() : run code once before all the file.
+-afterAll() : run code once after all the file.
+-beforeEach() : run code everytime before all the file.
+-afterEach() : run code everytime after all the file.
+
+*How to use 
 
 
 

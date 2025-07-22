@@ -2,13 +2,15 @@ import { test, expect,chromium, Browser, Page, Locator} from '@playwright/test';
 
 
 test('login test', async () => {
-    const browser: Browser = await chromium.launch({ headless: false });
+    const browser: Browser = await chromium.launch({ headless: false,channel:"chrome"});
     const page: Page = await browser.newPage();
     await page.goto('http://127.0.0.1:5500/form.html');
+    // use of selector based on the id
     const fName: Locator = await page.locator('#txt1');
     const password: Locator = await page.locator('#txt2');
     await fName.fill('Fahim');
     await password.fill('Fahim@123');
+
     const logo:Locator = await page.locator('.logo');
     const item = await logo.isEnabled();
     console.log(item);
@@ -26,5 +28,15 @@ test('login test', async () => {
 
     const pincode:Locator = await page.locator("css=input#txtpincode");
     await pincode.fill("600001");
+
+    // use of Xpath
+    const email:Locator = await page.locator('xpath=//input[@name="myemail" and @type="email"]');
+    await email.fill("admin@gmail.com");
+
+    const checkbox:Locator = await page.locator('xpath=//input[@name="term" and @type="checkbox"]');
+    const checkExit = await checkbox.isEnabled();
+    console.log(checkExit);
+
+
 
 });
