@@ -120,8 +120,27 @@ npx playwright test assertion.spec.ts --project chromium --headed
 -afterAll() : run code once after all the file.
 -beforeEach() : run code everytime before all the file.
 -afterEach() : run code everytime after all the file.
+ 
+How to use record features
+-it provide test script after performing action on web application or webpahes
+-it start record feature we have page.pause() methods in test code.
+ 
+*use of annotation
+*use of hooks
+ 
+test () : it is use to create block for perticular test
+describe(): it is use to wrap multiple test cases together belongging sam scenarios
+ 
+*fixture:
+-it is reusable piece of setup and teardown logical code that you can share across testing
+-it works like helper function
+-playwright provide us built-in fixture as well as we can create custom fixture
 
-*How to use 
+*Why Mock?
+-Backend is not ready
+-Faster test
+-simutetes errors(404,500,403-unauthorized, 200)
+-control test data
 
 
 
