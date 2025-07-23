@@ -129,7 +129,7 @@ How to use record features
 *use of hooks
  
 test () : it is use to create block for perticular test
-describe(): it is use to wrap multiple test cases together belongging sam scenarios
+describe(): it is use to wrap multiple test cases together belongging same scenarios
  
 *fixture:
 -it is reusable piece of setup and teardown logical code that you can share across testing
@@ -142,6 +142,34 @@ describe(): it is use to wrap multiple test cases together belongging sam scenar
 -simutetes errors(404,500,403-unauthorized, 200)
 -control test data
 
+
+----------------------------------------------------------------------------------------------------
+
+*End to End testing with Modularizartion
+-creating end to end test cases
+-splitting test into reusable module and component
+-Data Driven testing with paramaterize
+-CI/CD Integration with Git and Git Hub
+
+-In End to End testing we verify that the complete function of software application is working proper or not from start to end.
+-we ensure that integrated component work together seamlessly.
+-In this we validate the entire workflow from uses perpective.
+
+example: user will login ===> product will add to cart => checkout
+
+2-splitting test into reusable module and component
+LoginPage.ts
+
+3- Data Driven testing with paramaterize:
+-pass multiple user credential for login test
+
+4- CI/CD Integration with Git and GitHub
+-In this we configure git and github with playwright
+-there are two ways to use git and github with playwright
+1.while creating playwright project provide yes option for git configuration
+2.create yml file in existing project and write configuration setting in it.
+    create proper folder structure for yml file
+    -github/workflows/playwright.yml 
 
 
 
